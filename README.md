@@ -1,8 +1,6 @@
-# BlueBuild Template &nbsp; [![bluebuild build badge](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
+# Surface Pro 3 Bluefin based on Bluebuild &nbsp; [![bluefin-surfacepro3 build badge](https://github.com/Ahava/bluefin-surfacepro3/actions/workflows/build.yml/badge.svg)](https://github.com/Ahava/bluefin-surfacepro3/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
-
-After setup, it is recommended you update this README to describe your custom image.
+Custom image for my Surface Pro 3. This is adjusted to my own needs and should not be taken as a generalized image. Based on [BlueBuild](https://blue-build.org/how-to/setup/) and [Bluefin Surface](https://github.com/ublue-os/surface/pkgs/container/bluefin-surface).
 
 ## Installation
 
@@ -13,7 +11,7 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/blue-build/template:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/Ahava/bluefin-surfacepro3:latest
   ```
 - Reboot to complete the rebase:
   ```
@@ -21,7 +19,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/blue-build/template:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/Ahava/bluefin-surfacepro3:latest
   ```
 - Reboot again to complete the installation
   ```
@@ -30,14 +28,10 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
 
-## ISO
-
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
-
 ## Verification
 
 These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/blue-build/template
+cosign verify --key cosign.pub ghcr.io/Ahava/bluefin-surfacepro3
 ```
