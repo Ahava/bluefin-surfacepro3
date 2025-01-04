@@ -1,6 +1,6 @@
 # Surface Pro 3 Bluefin based on Bluebuild &nbsp; [![bluefin-surfacepro3 build badge](https://github.com/Ahava/bluefin-surfacepro3/actions/workflows/build.yml/badge.svg)](https://github.com/Ahava/bluefin-surfacepro3/actions/workflows/build.yml)
 
-Custom image for my Surface Pro 3. This is adjusted to my own needs and should not be taken as a generalized image. Based on [BlueBuild](https://blue-build.org/how-to/setup/) and [Bluefin Surface](https://github.com/ublue-os/surface/pkgs/container/bluefin-surface).
+Custom image for my Surface Pro 3. This is adjusted to my own needs and should not be taken as a generalized image. Based on [BlueBuild](https://blue-build.org/how-to/setup/) and [Bluefin HWE](https://github.com/ublue-os/bluefin/pkgs/container/bluefin-hwe).
 
 ## Installation
 
@@ -11,7 +11,7 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/Ahava/bluefin-surfacepro3:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/ahava/bluefin-surfacepro3:latest
   ```
 - Reboot to complete the rebase:
   ```
@@ -19,7 +19,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/Ahava/bluefin-surfacepro3:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ahava/bluefin-surfacepro3:latest
   ```
 - Reboot again to complete the installation
   ```
