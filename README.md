@@ -1,6 +1,6 @@
 # Surface Pro 3 Bluefin based on Bluebuild &nbsp; [![bluefin-surfacepro3 build badge](https://github.com/Ahava/bluefin-surfacepro3/actions/workflows/build.yml/badge.svg)](https://github.com/Ahava/bluefin-surfacepro3/actions/workflows/build.yml)
 
-Custom image for my Surface Pro 3. This is adjusted to my own needs and should not be taken as a generalized image. Based on [BlueBuild](https://blue-build.org/how-to/setup/) and [Bluefin HWE](https://github.com/ublue-os/bluefin/pkgs/container/bluefin-hwe).
+Custom image for my Surface Pro 3. This is adjusted to my own needs and should not be taken as a generalized image. Based on [BlueBuild](https://blue-build.org/how-to/setup/) and [Bazzite](https://github.com/ublue-os/surface/pkgs/container/bazzite-gnome-surface).
 
 ## Installation
 
@@ -33,5 +33,5 @@ The `latest` tag will automatically point to the latest build. That build will s
 These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/Ahava/bluefin-surfacepro3
+cosign verify --key cosign.pub ghcr.io/ahava/bluefin-surfacepro3
 ```
